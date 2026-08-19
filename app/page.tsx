@@ -1,0 +1,2 @@
+import Link from "next/link";
+export default function Home(){return <main className="shell"><section className="card"><div className="brand">MINDVYORA</div><p className="muted">Learn. Engage. Evolve.</p><p>A digital classroom platform for students and teachers.</p><Link href="/login"><button>Enter MINDVYORA</button></Link></section></main>}
