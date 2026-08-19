@@ -18,7 +18,7 @@ export async function proxy(request: NextRequest) {
     }
   );
 
-  const { data: { claims } } = await supabase.auth.getClaims();
+  const { data: claims } = await supabase.auth.getClaims();
   const path = request.nextUrl.pathname;
   const protectedPath = path.startsWith("/student") || path.startsWith("/teacher") || path.startsWith("/admin");
 
