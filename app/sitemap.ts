@@ -1,5 +1,14 @@
 import type { MetadataRoute } from "next";
 
+const siteUrl = "https://mindvyora-psi.vercel.app";
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [{ url: "/", changeFrequency: "weekly", priority: 1 }];
+  return [
+    {
+      url: siteUrl,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 1,
+    },
+  ];
 }
