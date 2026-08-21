@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   openGraph: { type: "website", siteName: "MINDVYORA", title: "MINDVYORA — Where learning comes alive.", description: "A focused digital space for classes, projects, resources, announcements and conversations with your coach." },
   twitter: { card: "summary_large_image", title: "MINDVYORA — Where learning comes alive.", description: "A focused digital learning space for students and coaches." },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
+  verification: { google: "x-t28AtKs-EuUlWeVs9doLdkc2gxWmAzaQP2UltDhnQ" },
 };
 
 export default function RootLayout({ children }: Readonly<{children: React.ReactNode}>) { return <html lang="en"><body>{children}</body></html>; }
