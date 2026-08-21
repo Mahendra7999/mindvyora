@@ -3,6 +3,7 @@ import "./neon.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mindvyora-psi.vercel.app"),
   title: { default: "MINDVYORA — Digital Learning Space", template: "%s | MINDVYORA" },
   description: "MINDVYORA is a digital learning space for students to learn, connect with their coach, access resources, follow announcements and stay engaged with their learning journey.",
   applicationName: "MINDVYORA", keywords: ["MINDVYORA", "digital learning platform", "student learning", "STEM learning", "student resources", "student coach"],
