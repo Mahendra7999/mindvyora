@@ -56,7 +56,7 @@ export default function AnimatedHero({ studentClass, firstName }: { studentClass
         <div className="visual-layer layer-back" aria-hidden="true">
           <span className="spark spark-a" /><span className="spark spark-b" /><span className="spark spark-c" /><span className="spark spark-d" />
         </div>
-        <img className="innovation-art" src="/innovation-hero.svg" alt="Glowing open book sending knowledge and energy toward a central brain, surrounded by a light bulb, AI chip, robotic arm, code and rocket" />
+        <img className="innovation-art" src="/student-hero.svg" alt="Glowing open book sending knowledge and energy toward a central brain, surrounded by a light bulb, AI chip, robotic arm, code and rocket" />
         <div className="energy-paths" aria-hidden="true"><span /><span /><span /><span /><span /></div>
         <div className="brain-bloom" aria-hidden="true" />
         <div className="book-bloom" aria-hidden="true" />
