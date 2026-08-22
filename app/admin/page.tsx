@@ -2,7 +2,7 @@ import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import StudentManagement from "./student-management";
 
-export type Student = { id: string; student_code: string; full_name: string; class_name: string; section: string | null; roll_number: number | null };
+export type Student = { id: string; school_id: string; student_code: string; full_name: string; class_name: string; section: string | null; roll_number: number | null };
 
 type AdminStats = { resourceCount: number; announcementCount: number; messageCount: number };
 
@@ -14,7 +14,7 @@ export default async function AdminPage() {
   if (profile?.role !== "admin") redirect("/student");
 
   const [{ data: students, error }, resources, announcements, messages] = await Promise.all([
-    supabase.from("students").select("id, student_code, full_name, class_name, section, roll_number").order("class_name").order("section").order("roll_number"),
+    supabase.from("students").select("id, school_id, student_code, full_name, class_name, section, roll_number").order("class_name").order("section").order("roll_number"),
     supabase.from("resources").select("id", { count: "exact", head: true }),
     supabase.from("announcements").select("id", { count: "exact", head: true }),
     supabase.from("messages").select("id", { count: "exact", head: true }),
