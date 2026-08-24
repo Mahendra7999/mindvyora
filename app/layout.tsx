@@ -1,6 +1,7 @@
 import "./globals.css";
 import "./neon.css";
 import type { Metadata } from "next";
+import AccessibilityControls from "./accessibility-controls";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mindvyora-psi.vercel.app"),
@@ -14,4 +15,6 @@ export const metadata: Metadata = {
   verification: { google: "x-t28AtKs-EuUlWeVs9doLdkc2gxWmAzaQP2UltDhnQ" },
 };
 
-export default function RootLayout({ children }: Readonly<{children: React.ReactNode}>) { return <html lang="en"><body>{children}</body></html>; }
+export default function RootLayout({ children }: Readonly<{children: React.ReactNode}>) {
+  return <html lang="en"><body><AccessibilityControls />{children}</body></html>;
+}
